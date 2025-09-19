@@ -1,0 +1,25 @@
+@class NSString, NSDateFormatter, NSDate;
+
+@interface WFDatePickerParameter : WFParameter <WFModuleSummarySupporting, WFParameterDialogProvider>
+
+@property (class, nonatomic, readonly) NSDateFormatter *dateFormatter;
+
+@property (copy, nonatomic) NSString *datePickerMode;
+@property (retain, nonatomic) NSDate *minimumDate;
+@property (retain, nonatomic) NSDate *maximumDate;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (readonly, copy) NSString *description;
+@property (readonly, copy) NSString *debugDescription;
+
++ (Class)moduleSummaryEditorClass;
+
+- (id)moduleSummarySlotForState:(id)a0;
+- (void).cxx_destruct;
+- (id)initWithDefinition:(id)a0;
+- (id)defaultSupportedVariableTypes;
+- (Class)singleStateClass;
+- (void)createDialogRequestWithAttribution:(id)a0 defaultState:(id)a1 prompt:(id)a2 completionHandler:(id /* block */)a3;
+- (id)parameterStateFromDialogResponse:(id)a0;
+
+@end

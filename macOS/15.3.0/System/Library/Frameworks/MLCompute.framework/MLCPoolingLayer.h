@@ -1,0 +1,17 @@
+@class MLCPoolingDescriptor;
+
+@interface MLCPoolingLayer : MLCLayer
+
+@property (readonly, copy, nonatomic) MLCPoolingDescriptor *descriptor;
+
++ (id)poolingLayer:(const void *)a0 error:(id *)a1;
++ (id)layerWithDescriptor:(id)a0;
++ (BOOL)supportsDataType:(int)a0 onDevice:(id)a1;
+
+- (id)description;
+- (void).cxx_destruct;
+- (id)initWithDescriptor:(id)a0;
+- (BOOL)compileForDevice:(id)a0 sourceTensors:(id)a1 resultTensor:(id)a2;
+- (id)summarizedDOTDescription;
+
+@end

@@ -1,0 +1,30 @@
+@interface WFCarPlayConnectionTrigger : WFTrigger
+
+@property (nonatomic) BOOL onConnect;
+@property (nonatomic) BOOL onDisconnect;
+
++ (BOOL)supportsSecureCoding;
++ (id)localizedDisplayName;
++ (BOOL)isUserInitiated;
++ (BOOL)isAllowedToRunAutomatically;
++ (long long)triggerBacking;
++ (id)onLabel;
++ (id)offIcon;
++ (id)displayGlyphName;
++ (BOOL)isSupportedOnThisDevice;
++ (id)localizedDisplayExplanation;
++ (id)offLabel;
++ (id)onIcon;
+
+- (id)publisherWithScheduler:(id)a0;
+- (void)shouldFireInResponseToEvent:(id)a0 triggerIdentifier:(id)a1 completion:(id /* block */)a2;
+- (id)copyWithZone:(struct _NSZone { } *)a0;
+- (id)init;
+- (void)encodeWithCoder:(id)a0;
+- (id)initWithCoder:(id)a0;
+- (id)suggestedActions;
+- (id)localizedDescriptionWithConfigurationSummary;
+- (id)localizedPastTenseDescription;
+- (BOOL)hasValidConfiguration;
+
+@end

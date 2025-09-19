@@ -1,0 +1,24 @@
+@class NSSet, NSString, RMModelAnyPayload;
+
+@interface RMModelStatusReason : RMModelPayloadBase
+
+@property (class, readonly, copy) NSSet *allowedStatusKeys;
+
+@property (copy, nonatomic) NSString *statusCode;
+@property (copy, nonatomic) NSString *statusDescription;
+@property (copy, nonatomic) RMModelAnyPayload *statusDetails;
+
++ (id)reasonWithCode:(id)a0 description:(id)a1 details:(id)a2;
++ (id)reasonWithCode:(id)a0 description:(id)a1 underlyingError:(id)a2;
++ (id)reasonWithError:(id)a0;
++ (id)buildRequiredOnlyWithCode:(id)a0;
++ (id)buildWithCode:(id)a0 description:(id)a1 details:(id)a2;
+
+- (BOOL)isEqual:(id)a0;
+- (BOOL)isEqualToStatusReason:(id)a0;
+- (id)copyWithZone:(struct _NSZone { } *)a0;
+- (void).cxx_destruct;
+- (BOOL)loadFromDictionary:(id)a0 serializationType:(short)a1 error:(id *)a2;
+- (id)serializeWithType:(short)a0;
+
+@end
